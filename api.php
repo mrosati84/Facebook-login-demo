@@ -8,10 +8,10 @@ use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 
-// setta l'applicazione facebook
+// set Facebook application
 FacebookSession::setDefaultApplication($appId, $appSecret);
 
-// crea una sessione usando l'access token fornito dal SDK JS
+// create session using access token provided by js SDK
 try {
     $session = new FacebookSession(file_get_contents('php://input'));
 } catch(\Exception $e) {
@@ -21,7 +21,7 @@ try {
 
 if ($session) {
     try {
-        // recupera il nome dell'utente
+        // get Facebook user name
         $user_profile = (new FacebookRequest(
             $session, 'GET', '/me'
         ))->execute()->getGraphObject(GraphUser::className());
