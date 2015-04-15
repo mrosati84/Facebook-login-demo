@@ -1,3 +1,4 @@
+<?php require __DIR__.'/settings.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '1427319067570324',
+                appId      : '<?php echo $appId ?>',
                 xfbml      : true,
                 version    : 'v2.3'
             });

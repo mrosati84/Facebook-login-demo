@@ -1,14 +1,12 @@
 <?php
 
 require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/settings.php';
 
 use Facebook\FacebookJavaScriptLoginHelper;
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
-
-$appId = '1427319067570324';
-$appSecret = '73e2686764a1fd0bf2b20a0632c222ef';
 
 // setta l'applicazione facebook
 FacebookSession::setDefaultApplication($appId, $appSecret);
